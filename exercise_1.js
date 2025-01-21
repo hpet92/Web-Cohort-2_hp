@@ -3,64 +3,76 @@
 // For each expression, predict what you think the output will be in a comment (`//`) ***without first running the command***. Then run the expression in the console. Note the actual output in a comment and compare it with your prediction.
 
 // Example
-typeof("potato")
+typeof "potato";
 // Prediction: Vegetable
 // Actual: String
 
 // What is the output of each of the expressions below?
 
-typeof(15)
-// Prediction:
+typeof 15;
+console.log(typeof 15);
+// Prediction: Number, int
+// Actual: number
+
+typeof 5.5;
+console.log(typeof 5.5);
+// Prediction: Number, decimal
+// Actual: number
+
+typeof NaN;
+console.log(typeof NaN);
+// Prediction: null
+// Actual: number
+
+typeof "hello";
+console.log(typeof "hello");
+// Prediction: string
+// Actual: string
+
+typeof true;
+console.log(typeof true);
+// Prediction: boolean
+// Actual: boolean
+
+typeof (1 != 2);
+console.log(typeof (1 != 2));
+// Prediction: boolean
+// Actual: boolean
+
+"hamburger" + "s";
+console.log(typeof "hamburger" + "s");
+// Prediction: string
 // Actual:
 
-typeof(5.5)
-// Prediction:
-// Actual:
+"hamburgers" - "s";
+console.log(typeof "hamburger" - "s");
+// Prediction: string
+// Actual: strings
 
-typeof(NaN)
-// Prediction:
-// Actual:
+"1" + "3";
+console.log(typeof "1" + "3");
+// Prediction: string
+// Actual: NaN
 
-typeof("hello")
-// Prediction:
-// Actual:
+"1" - "3";
+console.log(typeof "1" - "3");
+// Prediction: string
+// Actual: string3
 
-typeof(true)
-// Prediction:
-// Actual:
+"johnny" + 5;
+console.log(typeof "johnny" + 5);
+// Prediction: null
+// Actual: NaN
 
-typeof(1 != 2)
-// Prediction:
-// Actual:
+"johnny" - 5;
+console.log(typeof "johnny" - 5);
+// Prediction: null
+// Actual: string5
 
-
-"hamburger" + "s"
-// Prediction:
-// Actual:
-
-"hamburgers" - "s"
-// Prediction:
-// Actual:
-
-"1" + "3"
-// Prediction:
-// Actual:
-
-"1" - "3"
-// Prediction:
-// Actual:
-
-"johnny" + 5
-// Prediction:
-// Actual:
-
-"johnny" - 5
-// Prediction:
-// Actual:
-
-99 * "luftbaloons"
-// Prediction:
-// Actual:
+99 * "luftbaloons";
+console.log(typeof 99 * "luftbaloons");
+// Prediction: null
+// Actual: NaN
 
 // Data Structures
 
@@ -76,87 +88,114 @@ typeof(1 != 2)
 
 // What will the contents of the below arrays be after the code samples are executed? Come up with an answer yourself before testing it out in the console.
 
-var numbers = [2, 4, 6, 8]
-numbers.pop()
-numbers.push(10)
-numbers.unshift(3)
+var numbers = [2, 4, 6, 8];
+//numbers.pop();
+// numbers.push(10);
+numbers.unshift(3);
+console.log(numbers);
 
 // Your answer goes here.
+// numbers.pop() = 2,4,6
+// number.push(10) = 2,4,6,8,10
+// numbers.unshift(3) = 3,2,4,6,8
 
 // What is the return value of the below code sample? Come up with an answer yourself before testing it out in the console.
 
-var morse = ["dot", "pause", "dot"]
-var moreMorse = morse.join(" dash ")
-moreMorse.split(" ")
+var morse = ["dot", "pause", "dot"];
+var moreMorse = morse.join(" dash ");
+moreMorse.split(" ");
+console.log(moreMorse);
 
 // Your answer goes here.
+// moreMorse = dot dash pause dash dot
+// moreMorse = dot dash pause dash dot
 
 // What will the contents of the below array be after the below code sample is executed? Come up with an answer yourself before testing it out in the console.
 
-var bands = []
-var beatles = ["Paul", "John", "George", "Pete"]
-var stones = ["Brian", "Mick", "Keith", "Ronnie", "Charlie"]
-bands.push(beatles)
-bands.unshift(stones)
-bands[bands.length - 1].pop()
-bands[0].shift()
-bands[1][3] = "Ringo"
+var bands = [];
+var beatles = ["Paul", "John", "George", "Pete"];
+var stones = ["Brian", "Mick", "Keith", "Ronnie", "Charlie"];
+bands.push(beatles);
+bands.unshift(stones);
+bands[bands.length - 1].pop();
+bands[0].shift();
+bands[1][3] = "Ringo";
+
+console.log(bands);
+console.log(bands.map((innerArray) => innerArray.join(", ")));
 
 // Your answer goes here.
+// bands = ["Paul", "John", "George", "Pete"]
+// bands = ["Brian", "Mick", "Keith", "Ronnie", "Charlie","Paul", "John", "George", "Pete"]
+// bands = ["Brian", "Mick", "Keith", "Ronnie", "Charlie","Paul", "John","George"]
+// bands = ["Mick", "Keith", "Ronnie", "Charlie","Paul", "John","George"]
+// bands = ["Mick", "Keith", "Ronnie", "Charlie","George","Paul", "John","Ringo"]
 
 // Booleans & Comparison Operators
 
 // Write your expected result for the OR and AND operations below each statement. Fact check yourself with browser console.
 
 // OR
-true||true
-// Prediction:
-// Actual:
+true || true;
+// Prediction: true
+// Actual: true
+console.log(true || true);
 
-true||false
-// Prediction:
-// Actual:
+true || false;
+// Prediction: true
+// Actual: true
+console.log(true || false);
 
-false||true
-// Prediction:
-// Actual:
+false || true;
+// Prediction: true
+// Actual: true
+console.log(false || true);
 
-false||false
-// Prediction:
-// Actual:
+false || false;
+// Prediction: false
+// Actual: false
+console.log(false || false);
 
-3||3
-// Prediction:
-// Actual:
+3 || 3;
+// Prediction: 3
+// Actual: 3
+console.log(3 || 3);
 
-1||5
-// Prediction:
-// Actual:
+1 || 5;
+// Prediction: 1
+// Actual: 1
+console.log(1 || 5);
 
 // AND
-true&&true
-// Prediction:
-// Actual:
+true && true;
+// Prediction: true
+// Actual: true
+console.log(true && true);
 
-true&&false
-// Prediction:
-// Actual:
+true && false;
+// Prediction: false
+// Actual: false
+console.log(true && false);
 
-false&&true
-// Prediction:
-// Actual:
+false && true;
+// Prediction: false
+// Actual: false
+console.log(false && true);
 
-false&&false
-// Prediction:
-// Actual:
+false && false;
+// Prediction: false
+// Actual: false
+console.log(false && false);
 
-3&&3
-// Prediction:
-// Actual:
+3 && 3;
+// Prediction: 3
+// Actual: 3
+console.log(3 && 3);
 
-1&&5
-// Prediction:
-// Actual:
+1 && 5;
+// Prediction: 1
+// Actual: 5
+console.log(1 && 5);
 
 // Chained Logic
 
@@ -167,7 +206,11 @@ false&&false
 // If a dog is small (under 50 pounds), print out "Have a biscuit!"
 
 function giveDogATreat(dog) {
-    // You logic goes here
+  if (dog.weight > 50) {
+    console.log("Have a bone!");
+  } else {
+    console.log("Have a biscuit!");
+  }
 }
 
 // Now a dog must sit or shake to get a treat
@@ -176,5 +219,30 @@ function giveDogATreat(dog) {
 // If the dog can't sit or shake, teach them to sit or shake by updating their attributes and then check again
 
 function giveDogATreatAfterTrick(dog) {
-    // Your logic goes here
+  if (dog.canSit || canShake) {
+    if (dog.weight > 50) {
+      console.log("Have a bone!");
+    } else {
+      console.log("Have a biscuit!");
+    }
+  } else {
+    // Teach the dog to sit
+    console.log("Let's teach you to sit first!");
+    dog.canSit = true;
+
+    // Now that dog can sit, give them a treat
+    if (dog.weight > 50) {
+      console.log("Have a bone!");
+    } else {
+      console.log("Have a biscuit!");
+    }
+  }
 }
+
+const goodDog = {
+  weight: 60,
+  canSit: true,
+  canShake: false,
+};
+
+giveDogATreatAfterTrick(goodDog);
