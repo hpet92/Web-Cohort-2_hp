@@ -11,12 +11,12 @@ typeof "potato";
 
 typeof 15;
 console.log(typeof 15);
-// Prediction: Number, int
+// Prediction: Number
 // Actual: number
 
 typeof 5.5;
 console.log(typeof 5.5);
-// Prediction: Number, decimal
+// Prediction: Number
 // Actual: number
 
 typeof NaN;
@@ -239,7 +239,7 @@ function giveDogATreatAfterTrick(dog) {
   }
 }
 
-const goodDog = {
+var goodDog = {
   weight: 60,
   canSit: true,
   canShake: false,
