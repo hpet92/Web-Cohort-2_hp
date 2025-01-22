@@ -245,4 +245,5 @@ var goodDog = {
   canShake: false,
 };
 
+giveDogATreat(goodDog);
 giveDogATreatAfterTrick(goodDog);
